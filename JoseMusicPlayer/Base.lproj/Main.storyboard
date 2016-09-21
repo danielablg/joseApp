@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="JoseMusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3V-u0-Sfd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="t1W-rb-gE8">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ShB-TQ-ETy" customClass="ButtonsStackView" customModule="JoseMusicPlayer" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkh-Qi-9Q4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="6NY-Dg-uvu"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="MC8-N4-taK"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="6NY-Dg-uvu"/>
+                                                <exclude reference="MC8-N4-taK"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="t1W-rb-gE8" firstAttribute="leading" secondItem="m3V-u0-Sfd" secondAttribute="leading" id="Fph-dw-fbd"/>
+                                    <constraint firstAttribute="trailing" secondItem="t1W-rb-gE8" secondAttribute="trailing" id="NS7-fx-qO6"/>
+                                    <constraint firstItem="t1W-rb-gE8" firstAttribute="top" secondItem="m3V-u0-Sfd" secondAttribute="top" id="YQR-eX-klO"/>
+                                    <constraint firstItem="t1W-rb-gE8" firstAttribute="width" secondItem="m3V-u0-Sfd" secondAttribute="width" id="oLu-Zd-5Um"/>
+                                    <constraint firstAttribute="bottom" secondItem="t1W-rb-gE8" secondAttribute="bottom" id="p3I-sM-S4E"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="m3V-u0-Sfd" secondAttribute="bottom" id="DCF-Yy-Toi"/>
+                            <constraint firstItem="m3V-u0-Sfd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="bAq-xq-fXH"/>
+                            <constraint firstItem="m3V-u0-Sfd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lqW-yb-Bhk"/>
+                            <constraint firstAttribute="trailing" secondItem="m3V-u0-Sfd" secondAttribute="trailing" id="yuR-EU-3Nr"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="firstHorizontalStackView" destination="ShB-TQ-ETy" id="gFJ-XO-p2x"/>
+                        <outlet property="verticalStackView" destination="t1W-rb-gE8" id="47P-E5-hM2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="323" y="429"/>
+        </scene>
+    </scenes>
+</document>
